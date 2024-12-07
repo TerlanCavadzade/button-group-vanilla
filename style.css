@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-group>[aria-role="label"]>input {
+    display: none;
+}
+
+.button-group>[aria-role="label"] {
+    border: 1px solid grey;
+    flex: 1;
+    text-align: center;
+}
+
+.button-group>[aria-role="label"]:first-of-type {
+    border-top-left-radius: 100vh;
+    border-bottom-left-radius: 100vh;
+}
+
+.button-group>[aria-role="label"]:last-of-type {
+    border-top-right-radius: 100vh;
+    border-bottom-right-radius: 100vh;
+}
+
+.button-group>[aria-role="label"]:has(input:checked) {
+    background-color: grey;
+}
