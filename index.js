@@ -3,11 +3,11 @@ const optionListContainer = document.querySelector(".selected-options-list");
 
 btnGroups.forEach((btnGroup) => {
   btnGroup.addEventListener("click", (e) => {
-    if (e.target.matches(`[aria-role="label"]`)) {
+    if (e.target.matches(`label`)) {
+      e.preventDefault();
       const targetParent = e.target.parentNode;
-      const allElementsOfParent = targetParent.querySelectorAll(
-        `[aria-role="label"] > input`
-      );
+      const allElementsOfParent =
+        targetParent.querySelectorAll(`label > input`);
       allElementsOfParent.forEach((el) => {
         el.checked = el.parentNode === e.target;
       });
@@ -20,7 +20,7 @@ btnGroups.forEach((btnGroup) => {
 
 const getAllSelectedOptions = () => {
   const allSelectedOptions = document.querySelectorAll(
-    `.button-group > [aria-role="label"] > input:checked`
+    `.button-group > label > input:checked`
   );
 
   const optionNodesArrayForm = Array.from(allSelectedOptions);

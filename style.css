@@ -10,26 +10,26 @@
     flex-wrap: wrap;
 }
 
-.button-group>[aria-role="label"]>input {
+.button-group>label>input {
     display: none;
 }
 
-.button-group>[aria-role="label"] {
+.button-group>label {
     border: 1px solid grey;
     flex: 1;
     text-align: center;
 }
 
-.button-group>[aria-role="label"]:first-of-type {
+.button-group>label:first-of-type {
     border-top-left-radius: 100vh;
     border-bottom-left-radius: 100vh;
 }
 
-.button-group>[aria-role="label"]:last-of-type {
+.button-group>label:last-of-type {
     border-top-right-radius: 100vh;
     border-bottom-right-radius: 100vh;
 }
 
-.button-group>[aria-role="label"]:has(input:checked) {
+.button-group>label:has(input:checked) {
     background-color: grey;
 }
